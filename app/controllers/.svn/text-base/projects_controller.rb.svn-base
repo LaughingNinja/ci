@@ -1,0 +1,61 @@
+class ProjectsController < ApplicationController
+  
+  before_filter :only_if_logged_in
+  
+  def index
+    if !params["start_date"].nil? && !params["end_date"].nil?
+      start_date = params["start_date"].to_date.to_s
+      end_date =  params["end_date"].to_date.to_s  
+      @projects = Project.joins(:faults) & Fault.limit_date_range(start_date, end_date )
+      render :partial => "grid", :locals => { :faults => @projects }
+    else
+      @projects = Project.all
+      respond_to do |format|
+        format.html { render :html => @projects}
+      end
+    end
+  end  
+  
+  def new
+      @project = Project.new 
+      
+      respond_to do |format|
+        format.html
+        format.xml {render :xml => @project }
+      end  
+  end
+  
+  def create
+    @project = Project.new(params[:project])
+    
+    if @project.save
+      redirect_to projects_path
+    end
+  end
+  
+  def edit
+  end
+  
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(params[:project])
+      redirect_to projects_path
+    end 
+  end
+  
+  def destroy
+    @project = Project.find(params[:id])
+    if @project.destroy
+      redirect_to projects_path
+    end
+  end 
+
+  def show
+    @project = Project.find(params[:id])
+    respond_to do |format|
+      format.html
+    end
+  end
+
+end
+

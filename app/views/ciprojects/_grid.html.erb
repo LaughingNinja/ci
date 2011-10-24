@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag 'ui/jquery/base/jquery.ui.all', :media => 'screen' %>
+<%= stylesheet_link_tag 'addons/tablesorter/tablesorter', :media => 'screen' %>
+<%= stylesheet_link_tag 'ui/ui.accordion', :media => 'screen' %>
+
+<%= javascript_include_tag 'jquery/ui/jquery.ui.core.js' %>
+<%= javascript_include_tag 'jquery/ui/jquery.ui.widget.js' %>
+<%= javascript_include_tag 'jquery/ui/jquery.ui.accordion.js' %>
+
+<%= javascript_include_tag 'jquery/addons/tablesorter/jquery.tablesorter.js' %>
+<%= javascript_include_tag 'jquery/addons/tablehover/jquery.tablehover.js' %>
+
+
+
+<script type="text/javascript"> 
+	$(function() {		
+		$( "#accordion" ).accordion();
+
+		$(".tablesorter").tablesorter({sortList:[[0,0]], widgets: ['zebra']});
+		$('.tablesorter').tableHover(); 
+		var theTable = $('.tablesorter')
+
+		$("#filter").keyup(function() {
+		  $.uiTableFilter( theTable, this.value );
+		}).focus();
+		
+	});
+</script>
+
+<%= render "shared/date_range_filter" %>
+
+<div class="content-container">
+	<h1>View by Projects</h1>
+	<br/>
+	<div id="accordion">
+	
+		<% @ciprojects.each do |ciproject|%>
+		
+			<div class="accordion-category-header"><a href="#"><%= ciproject.name %></a></div>
+			<div>
+			</div>
+		<% end %>
+		
+	</div>
+</div>

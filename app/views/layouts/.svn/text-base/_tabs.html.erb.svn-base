@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag 'ui/ui.navigation.tabs', :media => 'screen' %>
+
+
+<script type="text/javascript"> 
+	$(function() {	
+		var path = window.location.pathname;
+		switch(path) {
+			case '/faults/new/': case '/faults/new':
+			  $("#faults-new-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+
+			case '/devices/': case '/devices':
+			  $("#devices-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+		
+			case  '/projects/': case '/projects':
+			  $("#projects-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+		
+			case '/fault_types/': case '/fault_types':
+			  $("#failure-modes-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+		
+			case '/faults/': case '/faults':
+			  $("#faults-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+		
+			default:
+			  //todo
+		}
+	});
+</script>
+
+
+<div id="user-tabs" class="application-nav-tabs">
+	<div>
+		<span id="faults-new-tab" class="tab-default-state tabs"><a href="/faults/new">Report New Fault</a></span>
+
+		<span id="devices-tab" class="tab-default-state tabs"><a href="/devices/">View By Devices</a></span>
+		<span id="projects-tab" class="tab-default-state tabs"><a href="/projects/">View By Projects</a></span>
+		<span id="failure-modes-tab" class="tab-default-state tabs"><a href="/fault_types/">View By Failures</a></span>
+
+		<span id="faults-tab" class="tab-default-state tabs"><a href="/faults/">View Faults</a></span>
+		
+		<% if current_user.admin %>
+		<span id="admin-tab" class="tab-default-state tabs"><a href="/admin_projects/">Admin</a></span>
+		<% end %>
+	</div>
+
+	<div id="applicaton-nav-content-container">
+		<section>
+			<%= yield %>
+		</section>
+	</div>
+</div>

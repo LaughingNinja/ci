@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'ui/ui.navigation.tabs', :media => 'screen' %>
+
+
+<script type="text/javascript"> 
+	$(function() {	
+		var path = window.location.pathname;
+		switch(path) {
+		
+			default:
+			  //todo
+		}
+	});
+</script>
+
+
+<div id="user-tabs" class="application-nav-tabs">
+	<div>
+		
+		<% if current_user.admin %>
+		<span id="admin-tab" class="tab-default-state tabs"><a href="/admin_projects/">Admin</a></span>
+		<% end %>
+	</div>
+
+	<div id="applicaton-nav-content-container">
+		<section>
+			<%= yield %>
+		</section>
+	</div>
+</div>

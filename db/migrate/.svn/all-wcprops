@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/ci/!svn/ver/1/db/migrate
+END
+20110922210626_create_projects.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ci/!svn/ver/1/db/migrate/20110922210626_create_projects.rb
+END
+20110922205736_add_display_name_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ci/!svn/ver/1/db/migrate/20110922205736_add_display_name_to_user.rb
+END
+20110922174405_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ci/!svn/ver/1/db/migrate/20110922174405_create_users.rb
+END

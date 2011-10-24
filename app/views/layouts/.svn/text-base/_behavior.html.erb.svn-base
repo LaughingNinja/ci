@@ -1,0 +1,2 @@
+<%= javascript_include_tag 'jquery/core/jquery-1.6.2.min.js' %>
+<%= javascript_include_tag 'rails.js' %>

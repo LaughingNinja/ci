@@ -1,0 +1,112 @@
+/* ---------------------------------------------------------------------------------- */
+/*									 Navigation Tabs								  */
+/* ---------------------------------------------------------------------------------- */
+
+.application-nav-tabs{
+
+}
+
+.application-nav-tabs span.tabs{
+	/********** CSS 3 **********/
+	border-radius: 5px 5px 0 0;	
+	-moz-border-radius: 5px 5px 0 0;	
+	-webkit-border-radius: 5px 5px 0 0;		
+}
+
+.application-nav-tabs span a{
+	font:normal 14px Verdana,sans-serif;
+	line-height:30px;
+	padding:0 15px;	
+	color:#333;
+	text-align:middle;
+	text-decoration:none;	
+}
+
+.tab-default-state {
+	height: 30px;
+	background: #666666;
+	cursor:pointer;
+}
+
+.tab-default-state:hover {
+	background: #aaa;
+}
+
+.tab-selected-state {
+	height: 35px;
+	background: #ccc;
+	cursor:default;
+}
+
+.application-nav-tabs #applicaton-nav-content-container{	
+	overflow:auto;	
+	position:absolute;
+	height:70%;
+	width:90%;
+	top:160px;
+	background: #ccc;
+	padding:5px;
+	
+	/********** CSS 3 **********/
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	box-shadow:5px 5px 5px #000;
+	-webkit-box-shadow:5px 5px 5px #000;
+	-moz-box-shadow:5px 5px 5px #000;	
+}
+
+/* ------------------------------------- User Tabs ---------------------------------- */
+
+#user-tabs #faults-new-tab {
+	float: left;
+	margin: 0 50px;
+}
+
+#user-tabs #devices-tab, #projects-tab, #failure-modes-tab {
+	float: left;
+	margin: 0 2px;
+}
+
+#user-tabs #faults-tab{
+	float: left;
+	margin: 0 50px;
+}
+
+#user-tabs #admin-tab{
+	float: left;
+	margin: 0 50px;
+}
+
+#user-tabs  #admin-tab  a {
+	color:#f00;	
+}
+
+
+
+/* ------------------------------------ Admin Tabs ---------------------------------- */
+
+
+#admin-tabs #projects-tab, #devices-tab, #failures-tab, #faults-tab, #device-types-tab, #project-devices-tab, #device-failures-tab {
+	float: left;
+	margin: 0 2px;
+}
+
+#admin-tabs  #data-tab {
+	color:#333;
+	float: left;
+	margin: 0 50px;	
+}
+
+#tab-spacer {
+	float: left;
+	margin: 0 30px;	
+}
+
+#admin-tabs  #data-tab  a{
+	color:#f00;	
+}
+
+
+

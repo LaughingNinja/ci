@@ -1,0 +1,129 @@
+/* ---------------------------------------------------------------------------------- */
+/*									 WETNET Core Styles								  */
+/* ---------------------------------------------------------------------------------- */
+
+
+html, body{
+	margin:0;
+	padding:0;
+	height:100%;
+	font:normal 12px Verdana,sans-serif;
+}
+
+#wetnet-container {
+	min-height:100%;
+	position:relative;
+	background-color:#333333;
+}
+
+#header {
+	background:url("../../images/core/header.jpg") top left repeat-x;
+	height:96px;
+	
+	/********** CSS 3 **********/
+	box-shadow:0 2px 5px #000;
+	-webkit-box-shadow:0 2px 5px #000;
+	-moz-box-shadow:0 2px 5px #000;
+}
+
+#header #bg-left{
+	height:96px;	
+	background: url("../../images/core/header_left.jpg") left center no-repeat;
+	padding:0px 35px;
+}
+
+#header #title{
+	height:96px;	
+	padding:33px 35px;
+	font:normal 20px Verdana,sans-serif;
+	color:#ccc;
+	text-align:center;
+	float:center;
+	
+	/********** CSS 3 **********/
+	text-shadow: -1px -1px 0px #000;
+	-webkit-text-shadow: -1px -1px 0px #000;
+	-moz-text-shadow: -1px -1px 0px #000;
+}
+
+#wetnet-content {
+	padding:35px 35px;
+	overflow: auto;	
+}
+
+#footer {
+	background:url("../../images/core/footer.png") top left repeat-x;
+	position:absolute;
+	height:36px;
+	bottom:0;
+	width:100%;	
+	
+	/********** CSS 3 **********/
+	box-shadow:0 -2px 5px #000;
+	-webkit-box-shadow:0 -2px 5px #000;
+	-moz-box-shadow:0 -2px 5px #000;	
+}
+
+#footer #content {
+	font-size:11px;
+	line-height:36px;
+	padding:0 35px;	
+	color:#666;
+	text-align:left;	
+}
+
+h1 {
+	font:normal 20px Verdana,sans-serif;
+	color:#666666;	
+}
+
+h1 .admin {
+	color:#f00;	
+}
+
+h2 {
+	font:normal 14px Verdana,sans-serif;
+	color:#666666;	
+}
+
+
+.content-container {
+	padding: 35px;
+}
+
+
+#session-info {
+	margin:35px;
+	float:right;
+}
+
+#session-info .title {
+	font:normal 18px Verdana,sans-serif;
+	color:#ccc;
+}
+
+#session-info a {
+	font:normal 14px Verdana,sans-serif;
+	color:#aaa;
+	text-decoration:none;
+}
+
+#session-info a:hover {
+	color:#fff;
+}
+
+.sign-in {
+	margin: 0 auto;
+	background-color: #ccc;
+	padding:10px 50px;	
+	width:300px;
+	
+	/********** CSS 3 **********/
+	border-radius: 5px 5px 5px 5px;	
+	-moz-border-radius: 5px 5px 5px 5px;	
+	-webkit-border-radius: 5px 5px 5px 5px;	
+	
+	box-shadow:0 2px 5px #000;
+	-webkit-box-shadow:0 2px 5px #000;
+	-moz-box-shadow:0 2px 5px #000;
+}

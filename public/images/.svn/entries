@@ -1,0 +1,44 @@
+9
+
+dir
+1
+http://ruby@wet-dev/svn/ci/public/images
+http://ruby@wet-dev/svn/ci
+
+
+
+2011-09-23T00:39:06.433250Z
+1
+ruby
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0d584590-5a16-4a7c-aa65-dc384643be79
+
+
+
+
+
+
+0
+
+addons
+dir
+
+core
+dir
+
+ui
+dir
+

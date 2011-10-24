@@ -1,0 +1,19 @@
+.accordion-category-header{
+	font:normal 18px Verdana,sans-serif;
+	color:#666666;	
+}
+
+.accordion-category-total{
+	font:normal 14px Verdana,sans-serif;
+	color:#666666;
+	float:right;	
+}
+
+.accordion-subcategory-header{
+
+}
+
+.accordion-subcategory-total{
+	float:right;	
+}
+

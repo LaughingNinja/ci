@@ -1,0 +1,15 @@
+Ci::Application.routes.draw do
+ 
+  root :to => 'projects#index'
+ 
+  resources :projects
+
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  match '/signup', :to => 'users#new'
+  match '/signin', :to => 'sessions#new' 
+  match '/signout', :to => 'sessions#destroy'
+  
+ 
+end

@@ -1,0 +1,48 @@
+/* ---------------------------------------------------------------------------------- */
+/*			  						     Form Tabs							    	  */
+/* ---------------------------------------------------------------------------------- */
+
+#form-tabs-container {
+	width: 100%;
+	background: #0f0;
+}
+
+.form-tabs li {
+	width:200px;
+	list-style-type:none;
+	text-align:center;
+	float:left;
+	margin:0 2px;
+	
+	height: 30px;
+	
+	/********** CSS 3 **********/
+	border-radius: 5px 5px 5px 5px;	
+	-moz-border-radius: 5px 5px 5px 5px;	
+	-webkit-border-radius: 5px 5px 5px 5px;		
+}
+
+.form-tabs li a{
+	font:normal 14px Verdana,sans-serif;	
+	color:#eee;
+	text-decoration:none;
+	line-height:30px;	
+}
+
+
+.form-tab-default-state {	
+	background: #666666;
+	cursor:pointer;	
+}
+
+.form-tab-default-state:hover {
+	background: #aaa;
+	cursor:pointer;
+}
+
+.form-tab-selected-state {
+	background: #931205;
+	cursor:default;
+}
+
+

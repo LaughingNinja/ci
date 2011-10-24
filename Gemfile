@@ -1,0 +1,14 @@
+source 'http://rubygems.org'
+
+gem 'rails', '3.0.3'
+#gem 'rake', '0.8.7'  
+gem "jquery-rails", "~> 1.0.12"
+
+gem 'rails-footnotes', '>= 3.7'
+gem 'mysql2', '0.2.6'
+gem 'pg'
+
+gem 'net-ldap'
+
+gem 'carrierwave'
+

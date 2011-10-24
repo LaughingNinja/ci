@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 25
+/svn/ci/!svn/ver/1/script
+END
+rails
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/ci/!svn/ver/1/script/rails
+END

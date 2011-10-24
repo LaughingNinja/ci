@@ -1,0 +1,24 @@
+#date-range-filter{
+	padding:2px 30px;
+	margin:20px 45px;
+	float:right;
+	background-color:#fff;
+	
+	/********** CSS 3 **********/
+	border-radius: 15px 15px 15px 15px;	
+	-moz-border-radius: 15px 15px 15px 15px;	
+	-webkit-border-radius: 15px 15px 15px 15px;
+}
+
+#date-range-filter span {
+	margin: 0;
+}
+#date-range-filter span.label {
+	font-weight:bold;
+	color:#666666;
+}
+
+#date-range-filter input {
+	border:1px solid #999;
+	background-color:#eee;
+}

@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag 'addons/tablesorter/tablesorter', :media => 'screen' %>
+
+<%= javascript_include_tag 'jquery/addons/tablesorter/jquery.tablesorter.js' %>
+<%= javascript_include_tag 'jquery/addons/tablehover/jquery.tablehover.js' %>
+
+<script type="text/javascript"> 
+	$(function() {		
+		$(".tablesorter").tablesorter({sortList:[[0,0]], widgets: ['zebra']});
+		$('.tablesorter').tableHover(); 
+		var theTable = $('.tablesorter')
+
+		$(".tablesorter").keyup(function() {
+		  $.uiTableFilter( theTable, this.value );
+		}).focus();	
+	});
+</script>
+
+<div class="content-container">
+	<h1><span class="admin">Admin:</span> Manage Projects</h1>
+	<br/>
+	<div class="new-button"><%= link_to "Create Project", new_ciproject_path %></div>
+
+	<table id="" class="tablesorter">
+		<thead>
+			<tr>
+			    <th>Id</th>
+				<th>Name</th>
+				<th>Opening Date</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @ciprojects.each do |ciproject| %>
+			  <tr>
+				<td>
+					<%= link_to(ciproject.ciproject_id,  ciproject_path(ciproject)) %>
+				</td>
+				<td>
+					<%= link_to(ciproject.name,  ciproject_path(ciproject)) %>
+				</td>
+				<td>	
+					<%= link_to(ciproject.dte_opening,  ciproject_path(ciproject)) %>
+				</td>
+				<td>
+					<%= link_to " X ", ciproject_path(ciproject), :class => "x-button", :confirm => "Are you sure?", :method=>:delete %> 
+				</td>
+				<td>
+					<%= link_to('Edit', ciproject_path(ciproject), :class => "x-button") %> 
+				</td>
+			  </tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,80 @@
+/* ---------------------------------------------------------------------------------- */
+/*			  						         Form							    	  */
+/* ---------------------------------------------------------------------------------- */
+
+.data-form {
+	font:normal 16px Verdana,sans-serif;
+	padding: 35px;
+}
+
+.data-form-control-panel{
+	margin: 20px 0;
+	
+	text-align:center;
+	
+	width:875px;
+	background-color:#aaa;
+	padding:10px;
+	
+	/********** CSS 3 **********/
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+
+.form-field {
+	padding: 5px 0;
+}
+
+.form-field-detail {
+	padding: 0px 0;
+}
+
+.form-label {
+	background-color: #bbb;
+	display: inline-block;
+	width: 220px;
+	padding:2px 5px;
+		
+	color: #333;
+	text-align:right;
+	
+	/********** CSS 3 **********/
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;		
+}
+
+.form-label-align-left {
+	text-align:left;
+}
+
+.form-readonly-field{
+	color: #333;
+	font-weight:bold;
+}
+
+.table-multicolumn-middle {
+	width:100px;
+}
+
+.table-multicolumn td {
+	padding: 5px 0;
+}
+
+input, textarea {
+	padding:5px;
+    border: 1px solid #ccc;
+    font:normal 16px Verdana,sans-serif;
+    color: #333333;
+}
+
+select {
+  height: 16px;
+}
+
+select option {
+  line-height: 16px;
+  font:normal 16px Verdana,sans-serif;
+  color: #333333;
+}

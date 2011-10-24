@@ -1,0 +1,67 @@
+<%= stylesheet_link_tag 'ui/ui.navigation.tabs', :media => 'screen' %>
+
+<script type="text/javascript"> 
+	$(function() {	
+		var path = window.location.pathname;
+		switch(path) {
+			case '/admin_projects/': case '/admin_projects':
+			  $("#projects-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+
+			case '/admin_device_types/': case '/admin_device_types':
+			  $("#device-types-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+
+			case '/admin_devices/': case '/admin_devices':
+			  $("#devices-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+		
+			case '/project_devices/': case '/project_devices':
+			  $("#project-devices-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;		
+
+			case '/admin_fault_types/': case '/admin_fault_types':
+			  $("#failures-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;
+			
+			case '/device_fault_types/': case '/device_fault_types':
+			  $("#device-failures-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;			
+			
+			case '/admin_faults/': case '/admin_faults':
+			  $("#faults-tab").removeClass('tab-default-state').addClass('tab-selected-state');
+			  break;			
+		
+			default:
+			  //todo
+		}
+	});
+</script>
+
+
+<div id="admin-tabs" class="application-nav-tabs">
+	<div>
+		<span id="tab-spacer">&nbsp;</span>
+		<span id="projects-tab" class="tab-default-state tabs"><a href="/admin_projects/">Manage Projects</a></span>
+		<span id="tab-spacer">&nbsp;</span>
+		<span id="device-types-tab" class="tab-default-state tabs"><a href="/admin_device_types/">Manage Device Types</a></span>
+		<span id="devices-tab" class="tab-default-state tabs"><a href="/admin_devices/">Manage Devices</a></span>
+		<span id="project-devices-tab" class="tab-default-state tabs"><a href="/project_devices/">Assign Devices to Projects</a></span>
+		<span id="tab-spacer">&nbsp;</span>
+		<span id="failures-tab" class="tab-default-state tabs"><a href="/admin_fault_types/">Manage Failures</a></span>
+		<span id="device-failures-tab" class="tab-default-state tabs"><a href="/device_fault_types/">Assign Failures to Devices</a></span>
+		<span id="tab-spacer">&nbsp;</span>
+		<span id="faults-tab" class="tab-default-state tabs"><a href="/admin_faults/">Manage Faults</a></span>
+		
+		<% if current_user.admin %>
+		<span id="data-tab" class="tab-default-state tabs"><a href="/faults/">Application</a></span>
+		<% end %>
+		
+	</div>
+
+	<div id="applicaton-nav-content-container">
+		<section>
+			<%= yield %>
+		</section>
+	</div>
+</div>

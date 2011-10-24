@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>WETNET :: Contract & Invoice System</title>
+		<%= csrf_meta_tag %>
+		<%= render 'layouts/stylesheets' %>
+		<%= render 'layouts/behavior' %>
+	</head>
+	<body>
+		<div id="wetnet-container">
+			
+			<div id="session-info">
+				<% if signed_in? %>
+			    	<span class="title">Welcome, <%= current_user.display_name %>!</span> &nbsp; &nbsp; &nbsp;
+					</span><%= link_to "Logout", signout_path, :method => :delete %></span>
+				<% else %>
+			    	<span><%= link_to "Login", signin_path %></span>
+				<% end %>
+			</div>
+			
+			
+			<%= render 'layouts/header'%>
+	
+			<div id="wetnet-content">
+				<%= render 'layouts/tabs' %>
+			</div>
+	
+			<%= render 'layouts/footer'%>
+		</div>
+	</body>
+</html>

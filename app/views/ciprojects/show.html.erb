@@ -1,0 +1,199 @@
+<%= stylesheet_link_tag 'ui/jquery/base/jquery.ui.all', :media => 'screen' %>
+
+<%= javascript_include_tag 'jquery/ui/jquery.ui.core.js' %>
+<%= javascript_include_tag 'jquery/ui/jquery.ui.widget.js' %>
+<%= javascript_include_tag 'jquery/ui/jquery.ui.datepicker.js' %>
+<%= javascript_include_tag 'jquery/ui/jquery.ui.tabs.js' %>
+<%= stylesheet_link_tag 'ui/ui.form', :media => 'screen' %>
+
+<script>	
+	$(function() {
+		$(".datepicker").datepicker();
+		$("#tabs").tabs();
+	});		
+</script>
+
+<div id="create-new-ciproject-form">
+	<div class="content-container">
+		<h1><span class="admin">Admin:</span> Project Details</h1>
+		<%= form_for @ciproject do |f| %>
+		<table class="form-table" align="center">
+
+			<div class="form-field">
+				<span class="form-label">Project Id:</span>
+				<%= f.text_field :ciproject_id %>
+			</div>	
+
+			<div class="form-field">
+				<span class="form-label">Project Name:</span>
+				<%= f.text_field :name %>
+			</div>	
+	
+		</table>			
+		<div class="tabs-container">
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Address</a></li>
+					<li><a href="#tabs-2">Milestone</a></li>
+					<li><a href="#tabs-3">WET Team</a></li>
+					<li><a href="#tabs-4">Client Team</a></li>
+					<li><a href="#tabs-5">Plaque</a></li>
+				</ul>
+				<div id="tabs-1">
+					<h2><strong>Project Location:</strong></h1>
+
+					<div class="form-field-detail">
+						<span class="form-label">Address 1</span>
+						<%= f.text_field :site_addr1 %>
+						<span class="form-label">Address 2</span>
+						<%= f.text_field :site_addr2 %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">City</span>
+						<%= f.collection_select(:site_city_id, @site_cities, "id", "name") %> </td>
+						<span class="form-label">State</span>
+						<%= f.collection_select(:site_province_id, @site_provinces, "id", "name") %> </td>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">Country</span>
+						<%= f.collection_select(:site_country_id, @site_countries, "id", "name") %> </td>
+						<span class="form-label">Zip</span>
+						<%= f.text_field :site_zip %>
+					</div>
+
+					<h2><strong>Shipping Address:</strong></h1>
+
+					<div class="form-field-detail">
+						<span class="form-label">Address 1</span>
+						<%= f.text_field :ship_addr1 %>
+						<span class="form-label">Address 2</span>
+						<%= f.text_field :ship_addr2 %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">City</span>
+ 						<%= f.collection_select(:ship_city_id, @ship_cities, "id", "name") %> </td>
+						<span class="form-label">State</span>
+						<%= f.collection_select(:ship_province_id, @ship_provinces, "id", "name") %> </td>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">Country</span>
+						<%= f.collection_select(:ship_country_id, @ship_countries, "id", "name") %> </td>
+						<span class="form-label">Zip</span>
+						<%= f.text_field :ship_zip %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label form-label-align-left">Matrix Actions/Comments:</span><br/>
+						<%= f.text_area :comments, :cols => 108, :rows => 5 %>
+					</div>
+
+				</div>
+				<div id="tabs-2">
+
+					<div class="form-field-detail">
+						<span class="form-label">Design Presentation:</span>
+						<%= f.text_field :dte_design_present, :class=> "datepicker" %>
+						<span class="form-label">Schematic Release:</span>
+						<%= f.text_field :dte_schematic_rel, :class=> "datepicker" %>
+						<span class="form-label">Mock Up:</span>
+						<%= f.text_field :dte_mock_up, :class=> "datepicker" %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">10% DD Release</span>
+						<%= f.text_field :dte_10dd_rel, :class=> "datepicker" %>
+						<span class="form-label">100% CD Release:</span>
+						<%= f.text_field :dte_100cd_rel, :class=> "datepicker" %>
+						<span class="form-label">ERO Release:</span>
+						<%= f.text_field :dte_ero_rel, :class=> "datepicker" %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">First Shipment:</span>
+						<%= f.text_field :dte_1st_ship, :class=> "datepicker" %>
+						<span class="form-label">Next Shipment:</span>
+						<%= f.text_field :dte_next_ship, :class=> "datepicker" %>
+						<span class="form-label">Last Shipment:</span>
+						<%= f.text_field :dte_last_ship, :class=> "datepicker" %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">Install Observ:</span>
+						<%= f.text_field :dte_inst_observ, :class=> "datepicker" %>
+						<span class="form-label">T & A Start:</span>
+						<%= f.text_field :dte_ta_start, :class=> "datepicker" %>
+						<span class="form-label">Programming:</span>
+						<%= f.text_field :dte_program, :class=> "datepicker" %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">OBM Manual:</span>
+						<%= f.text_field :dte_om_manual, :class=> "datepicker" %>
+						<span class="form-label">Warranty Start:</span>
+						<%= f.text_field :dte_warranty_start, :class=> "datepicker" %>
+						<span class="form-label">Warranty End:</span>
+						<%= f.text_field :dte_warranty_end, :class=> "datepicker" %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">Close Out:</span>
+						<%= f.text_field :dte_close_out, :class=> "datepicker" %>
+						<span class="form-label">Procure Start:</span>
+						<%= f.text_field :dte_procure_start, :class=> "datepicker" %>
+						<span class="form-label">Procure End:</span>
+						<%= f.text_field :dte_procure_end, :class=> "datepicker" %>
+					</div>
+
+					<div class="form-field-detail">
+						<span class="form-label">Completion:</span>
+						<%= f.text_field :dte_complete, :class=> "datepicker" %>
+						<span class="form-label">Opening Date:</span>
+						<%= f.text_field :dte_opening, :class=> "datepicker" %>
+					</div>
+
+				</div>
+				<div id="tabs-3">
+					<div class="form-field-detail">
+						<span class="form-label">Project Manager:</span>
+						<%= f.collection_select(:project_manager_id, @project_managers, "id", "display_name") %> </td>
+						<span class="form-label">Field Tech 1:</span>
+						<%= f.collection_select(:field_tech1_id, @field_tech1s, "id", "display_name") %> </td>
+					</div>
+					<div class="form-field-detail">
+						<span class="form-label">Project Designer:</span>
+						<%= f.collection_select(:project_designer_id, @project_designers, "id", "display_name") %> </td>
+						<span class="form-label">Field Tech 2:</span>
+						<%= f.collection_select(:field_tech2_id, @field_tech2s, "id", "display_name") %> </td>
+					</div>
+					<div class="form-field-detail">
+						<span class="form-label">Project Architect:</span>
+						<%= f.collection_select(:project_architect_id, @project_architects, "id", "display_name") %> </td>
+						<span class="form-label">Programmer 1:</span>
+						<%= f.collection_select(:programmer1_id, @programmer1s, "id", "display_name") %> </td>
+					</div>
+					<div class="form-field-detail">
+						<span class="form-label">Project Engineer:</span>
+						<%= f.collection_select(:project_engineer_id, @project_engineers, "id", "display_name") %> </td>
+						<span class="form-label">Programmer 2:</span>
+						<%= f.collection_select(:programmer2_id, @programmer2s, "id", "display_name") %> </td>
+					</div>
+					<div class="form-field-detail">
+						<span class="form-label">Business Dev't Manager:</span>
+						<%= f.collection_select(:bd_manager_id, @bd_managers, "id", "display_name") %> </td>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-control-bar">
+			<span><%= link_to "Cancel", ciprojects_path %></span>&nbsp;&nbsp;&nbsp;
+			<%= f.submit "Update Project" %>
+		</div>
+	<% end %>
+	
+	</div>	
+</div>

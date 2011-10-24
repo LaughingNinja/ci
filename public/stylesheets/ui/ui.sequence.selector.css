@@ -1,0 +1,20 @@
+/* ---------------------------------------------------------------------------------- */
+/*									 Sequence Selector								  */
+/* ---------------------------------------------------------------------------------- */
+
+.sequence-selector-step{
+
+}
+
+.sequence-selector-step-header{
+	margin:20px;
+}
+
+.sequence-selector-step-header span{
+	margin: 0 10px;
+}
+
+.sequence-selector-step-header-title{
+	font:normal 20px Verdana,sans-serif;
+	color:#931205;
+}

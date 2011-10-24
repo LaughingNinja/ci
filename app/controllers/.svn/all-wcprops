@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/ci/!svn/ver/1/app/controllers
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ci/!svn/ver/1/app/controllers/users_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ci/!svn/ver/1/app/controllers/application_controller.rb
+END
+sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ci/!svn/ver/1/app/controllers/sessions_controller.rb
+END
+projects_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ci/!svn/ver/1/app/controllers/projects_controller.rb
+END

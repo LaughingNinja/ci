@@ -1,0 +1,105 @@
+table.tablesorter{
+	background-color: #fff;
+	font-size: 11px;
+	width:1500px;
+	text-align: left;
+	border-collapse:collapse;
+	border:1px solid #999;
+	margin:0 auto;
+}
+
+table.tablesorter thead tr th {
+	background-color: #eee;
+	font-size: 11px;
+	line-height:32px;
+	border:1px solid #ccc;
+	text-indent:8px;
+	padding:0;
+	color:#333;
+	
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	border-right:1px solid #ddd;
+	text-align:left;
+	/*text-indent:15px;*/
+	padding:0;
+	vertical-align: middle;
+	height:25px;
+}
+
+
+table.tablesorter a {color:#000;text-decoration:none;display:block;padding: 4px;}
+
+
+table.tablesorter tbody tr.odd{
+	background-color:#EFF2FF;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	background-color: #8dbdd8;
+	background-color:#666;
+	color:#fff;
+}
+
+
+td.click, th.click {
+	background-color: #bbb;
+}
+
+td.hover, tr.hover {
+	background:#ccc;
+	background:#B9C9FE;
+}
+
+th.hover, tfoot td.hover{
+	background-color: ivory;
+}
+
+td.hovercell, th.hovercell{
+	background-color: #abc;
+}
+
+td.hoverrow, th.hoverrow{
+	background-color: #6df;
+}
+
+
+
+.description-column{
+	width:85%;
+}
+
+.summary-column{
+	text-align:center;
+}
+
+table.tablesorter a.x-button {
+	text-align: center;
+	color: #f00;
+	font-weight: bold;
+}
+a.button.small_button.long{width:200px;font-size:.9em;line-height:1.8em}
+
+table.tablesorter a.edit-button {
+	background-image:url('/images/pencil-small.png');
+	color: #f00;
+}
+
+.new-button {
+	margin:10px 70px;
+}
+
+
+
+

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/ci/!svn/ver/1/app/views/layouts
+END
+sessions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ci/!svn/ver/1/app/views/layouts/sessions.html.erb
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ci/!svn/ver/1/app/views/layouts/_header.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ci/!svn/ver/1/app/views/layouts/_tabs.html.erb
+END
+admin.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ci/!svn/ver/1/app/views/layouts/admin.html.erb
+END
+_stylesheets.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ci/!svn/ver/1/app/views/layouts/_stylesheets.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ci/!svn/ver/1/app/views/layouts/_footer.html.erb
+END
+_behavior.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ci/!svn/ver/1/app/views/layouts/_behavior.html.erb
+END
+_admin_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ci/!svn/ver/1/app/views/layouts/_admin_tabs.html.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ci/!svn/ver/1/app/views/layouts/application.html.erb
+END

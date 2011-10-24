@@ -1,0 +1,47 @@
+<%= stylesheet_link_tag 'ui/jquery/base/jquery.ui.all', :media => 'screen' %>
+
+<%= javascript_include_tag 'jquery/ui/jquery.ui.core.js' %>
+<%= javascript_include_tag 'jquery/ui/jquery.ui.widget.js' %>
+<%= javascript_include_tag 'jquery/ui/jquery.ui.datepicker.js' %>
+
+<%= stylesheet_link_tag 'ui/ui.form', :media => 'screen' %>
+
+
+<script>	
+	$(function() {
+		$(".datepicker").datepicker();
+	});		
+</script>
+
+
+<div class="content-container">
+	<h1><span class="admin">Admin:</span> Project Details</h1>
+	<%= form_for @ciproject do |f| %>
+
+		<div class="form-field">
+			<span class="form-label">Project Name:</span>
+			<%= f.text_field :name %>
+		</div>	
+	
+		<div class="form-field">
+			<span class="form-label">Project Location:</span>
+			<%= f.text_field :location %>
+		</div>
+	
+		<div class="form-field">
+			<span class="form-label">Project Launch Date:</span>
+			<%= f.text_field :launch_date, :class=> "datepicker" %>
+		</div>
+
+		<div class="form-field">
+			<span class="form-label form-label-align-left">Project Description:</span><br/>
+			<%= f.text_area :description, :cols => 108, :rows => 5 %>
+		</div>
+	
+		<div class="data-form-control-panel">
+			<span><%= link_to "Cancel", ciprojects_path %></span>&nbsp;&nbsp;&nbsp;
+			<%= f.submit "Create Project" %>
+		</div>	
+			
+	<% end %>
+</div>

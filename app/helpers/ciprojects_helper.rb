@@ -1,0 +1,2 @@
+module CiprojectsHelper
+end

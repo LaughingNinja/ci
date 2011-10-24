@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>WETNET :: Contract & Invoice System</title>
+		<%= csrf_meta_tag %>
+		<%= render 'layouts/stylesheets' %>
+		<%= render 'layouts/behavior' %>
+	</head>
+	<body>
+		<div id="wetnet-container">
+						
+			<%= render 'layouts/header'%>
+	
+			<div id="wetnet-content">
+				<%= yield %>
+			</div>
+	
+			<%= render 'layouts/footer'%>
+		</div>
+	</body>
+</html>

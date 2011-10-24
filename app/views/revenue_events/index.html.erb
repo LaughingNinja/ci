@@ -1,0 +1,21 @@
+<h1>Listing revenue_events</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @revenue_events.each do |revenue_event| %>
+  <tr>
+    <td><%= link_to 'Show', revenue_event %></td>
+    <td><%= link_to 'Edit', edit_revenue_event_path(revenue_event) %></td>
+    <td><%= link_to 'Destroy', revenue_event, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Revenue event', new_revenue_event_path %>

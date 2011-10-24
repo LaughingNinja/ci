@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/ci/!svn/ver/1/test/functional
+END
+users_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ci/!svn/ver/1/test/functional/users_controller_test.rb
+END
+sessions_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ci/!svn/ver/1/test/functional/sessions_controller_test.rb
+END
+projects_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ci/!svn/ver/1/test/functional/projects_controller_test.rb
+END

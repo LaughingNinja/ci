@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/ci/!svn/ver/1/test/fixtures
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ci/!svn/ver/1/test/fixtures/users.yml
+END
+sessions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ci/!svn/ver/1/test/fixtures/sessions.yml
+END
+projects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ci/!svn/ver/1/test/fixtures/projects.yml
+END
